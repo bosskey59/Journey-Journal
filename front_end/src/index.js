@@ -36,7 +36,7 @@ M.Modal.init(elems, {})
 
 
 let blah = new Map({center: {lat: 15.8700, lng: 100.9925}});
- 
+
 blah.attachToDom();
 //blah.createMarker({position: {lat: 15.8700, lng: 100.9925}, title: "BLAH"})
 
@@ -83,11 +83,9 @@ fetch(TRAVELERS_URL+`/1`).then(resp => resp.json()).then(data => createElements(
 
 
 function createElements(data){
-	
+
 	traveler = new Traveler(data);
-	traveler.picture_url = "https://static.fashionbeans.com/wp-content/uploads/2015/03/dondm.jpg"
-	traveler.name = "Don Draper"
-	//debugger
+
 	traveler.attachToDom();
 	//debugger
 	//return traveler.attachToDom();
@@ -98,7 +96,7 @@ function createElements(data){
 //Event Delegation
 function handleClick(e){
 	//e.preventDefault();
-	
+
 	let submitbutton = e.target.id === "confirmterms"
 	let journeytab = e.target.parentElement.className === "tab col s2"
 	let createJourney = e.target.id === "createjourney"
@@ -186,6 +184,6 @@ function handleClick(e){
 
 
 
-	
+
 	//window.alert("hello")
 }
